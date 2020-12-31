@@ -100,10 +100,29 @@
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
 
+    // Create screens
+    var screens = {};
+    if (data.screens) {
+      data.screens.forEach(function (hotspot) {
+        var videoController = createScreenHotspotElement(hotspot);
+        scene.hotspotContainer().createHotspot(videoController.element, { yaw: hotspot.yaw, pitch: hotspot.pitch }, {perspective: { radius: hotspot.radius, extraTransforms: hotspot.extraTransforms }});
+        screens[hotspot.id || 'main'] = videoController;
+      });
+    }
+
+    // Create videoLinks
+    if (data.videoTriggerHotspots) {
+      data.videoTriggerHotspots.forEach(function (hotspot) {
+        var element = createVideoTriggerHotspotElement(hotspot);
+        scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });  
+      });
+    }
+
     return {
       data: data,
       scene: scene,
-      view: view
+      view: view,
+      screens: screens
     };
   });
 
@@ -189,6 +208,7 @@
     startAutorotate();
     updateSceneName(scene);
     updateSceneList(scene);
+    window.scene = scene;
   }
 
   function updateSceneName(scene) {
@@ -357,6 +377,166 @@
     return wrapper;
   }
 
+  function createVideoTriggerHotspotElement(hotspot) {
+
+    // Create wrapper element to hold icon and tooltip.
+    var wrapper = document.createElement('div');
+    wrapper.classList.add('hotspot');
+    wrapper.classList.add('info-hotspot');
+
+    // Create hotspot/tooltip header.
+    var header = document.createElement('div');
+    header.classList.add('info-hotspot-header');
+
+    // Create image element.
+    var iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('info-hotspot-icon-wrapper');
+    var icon = document.createElement('img');
+    icon.src = 'img/info.png';
+    icon.classList.add('info-hotspot-icon');
+    iconWrapper.appendChild(icon);
+
+    // Create title element.
+    var titleWrapper = document.createElement('div');
+    titleWrapper.classList.add('info-hotspot-title-wrapper');
+    var title = document.createElement('div');
+    title.classList.add('info-hotspot-title');
+    title.innerHTML = hotspot.title;
+    titleWrapper.appendChild(title);
+
+    // Create close element.
+    var closeWrapper = document.createElement('div');
+    closeWrapper.classList.add('info-hotspot-close-wrapper');
+    var closeIcon = document.createElement('img');
+    closeIcon.src = 'img/close.png';
+    closeIcon.classList.add('info-hotspot-close-icon');
+    closeWrapper.appendChild(closeIcon);
+
+    // Construct header element.
+    header.appendChild(iconWrapper);
+    header.appendChild(titleWrapper);
+    header.appendChild(closeWrapper);
+
+    // Create the playButton
+    var playButton = document.createElement('a');
+    playButton.href = '#';
+    playButton.innerHTML = 'Abspielen';
+    playButton.addEventListener('click', function () {
+      var videoController = window.scene.screens[hotspot.screen || 'main'];
+      videoController.play(hotspot.video);
+    });
+
+    // Create text element.
+    var text = document.createElement('div');
+    text.classList.add('info-hotspot-text');
+    text.innerHTML = hotspot.text;
+    text.appendChild(document.createElement('br'));
+    text.appendChild(document.createElement('br'));
+    text.appendChild(playButton);
+
+    // Place header and text into wrapper element.
+    wrapper.appendChild(header);
+    wrapper.appendChild(text);
+
+    // Create a modal for the hotspot content to appear on mobile mode.
+    var modal = document.createElement('div');
+    modal.innerHTML = wrapper.innerHTML;
+    modal.classList.add('info-hotspot-modal');
+    document.body.appendChild(modal);
+
+    var toggle = function() {
+      wrapper.classList.toggle('visible');
+      modal.classList.toggle('visible');
+    };
+
+    // Show content when hotspot is clicked.
+    wrapper.querySelector('.info-hotspot-header').addEventListener('click', toggle);
+
+    // Hide content when close icon is clicked.
+    modal.querySelector('.info-hotspot-close-wrapper').addEventListener('click', toggle);
+
+    // Prevent touch and scroll events from reaching the parent element.
+    // This prevents the view control logic from interfering with the hotspot.
+    stopTouchAndScrollEventPropagation(wrapper);
+
+    return wrapper;
+  }
+
+  function VideoScreenController (opts) {
+    this.element = opts.element;
+    this.videoElements = {};
+    this.currentVideo = null;
+    this.currentVideoElement = null;
+    this.orientation = opts.orientation;
+  }
+
+  VideoScreenController.prototype.play = function (videoID) {
+      var self = this;
+      // Hide currently showing video
+      if (self.currentVideo) {
+        self.currentVideoElement.style.display = 'none';
+      }
+
+      // Swivel view to the screen
+      scene.scene.lookTo(self.orientation, {}, function () {
+        self.currentVideo = videoID;
+        self.currentVideoElement = self.videoElements[videoID];
+        if (!self.currentVideoElement) {
+          console.error('Could not find video ', videoID, self.videoElements);
+        }
+        // Fade in video
+        self.currentVideoElement.style.display = 'block';
+        self.currentVideoElement.classList.add('fade-in');
+        self.currentVideoElement.pause(); 
+        self.currentVideoElement.currentTime = 0;
+        setTimeout(function () {
+          self.currentVideoElement.style.opacity = 1;
+        }, 200)
+        // Start playback
+        setTimeout(function () {
+          self.currentVideoElement.classList.remove('fade-in');
+          self.currentVideoElement.play();
+        }, 1750);
+      });
+    };
+
+  function createScreenHotspotElement(hotspot) {
+
+    // Create wrapper element to hold icon and tooltip.
+    var wrapper = document.createElement('div');
+    var controller = new VideoScreenController({
+      element: wrapper,
+      orientation: hotspot.viewOrientation || { pitch: hotspot.pitch, yaw: hotspot.yaw }
+    });
+    controller.element = wrapper;
+
+    wrapper.classList.add('hotspot');
+    wrapper.classList.add('screen-hotspot');
+    if (hotspot.type == 'video') {
+      hotspot.videos.forEach(function (video) {
+        var videoElement = document.createElement('video');
+        videoElement.style.display = 'none';
+        wrapper.appendChild(videoElement);
+        videoElement.setAttribute("width", hotspot.width);
+        videoElement.setAttribute("height", hotspot.height);
+        videoElement.setAttribute("controls", "controls");
+        video.sources.forEach(function (source) {
+          var sourceElement = document.createElement('source');
+          sourceElement.setAttribute('src', source.src);
+          sourceElement.setAttribute('type', source.type);
+          videoElement.appendChild(sourceElement);
+        });
+        controller.videoElements[video.id] = videoElement;
+      });
+    }
+    
+    // Prevent touch and scroll events from reaching the parent element.
+    // This prevents the view control logic from interfering with the hotspot.
+    stopTouchAndScrollEventPropagation(wrapper);
+
+    return controller;
+  }
+
   // Prevent touch and scroll events from reaching the parent element.
   function stopTouchAndScrollEventPropagation(element, eventList) {
     var eventList = [ 'touchstart', 'touchmove', 'touchend', 'touchcancel',
@@ -388,5 +568,5 @@
 
   // Display the initial scene.
   switchScene(scenes[0]);
-
+  window.scenes = scenes;
 })();

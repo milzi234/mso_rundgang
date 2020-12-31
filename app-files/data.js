@@ -28,33 +28,52 @@ var APP_DATA = {
         "pitch": -0.11344453815592814,
         "fov": 0.9420983572121656
       },
-      "linkHotspots": [],
-      "infoHotspots": [
+      "screens": [
         {
-          "yaw": 2.2172379608328425,
-          "pitch": -0.13384865851106298,
-          "title": "p1",
-          "text": "Text"
-        },
+          "yaw": 1.7861318131345009,
+          "pitch": -0.25744266112553,
+          "viewOrientation": {yaw: 2, pitch: 0},
+          "type": "video",
+          "width": "320",
+          "height": "240",
+          "radius": "450",
+          "extraTransforms": "rotateY(-13deg) rotateX(10deg) rotate(-2.5deg)",
+          "videos": [
+            {
+              "id": "video1",
+              "title": "Platzhalter",
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "video2",
+              "title": "Platzhalter",
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
+      "videoTriggerHotspots": [
         {
           "yaw": -0.69657059190056,
           "pitch": -0.11867922708424317,
           "title": "p2",
-          "text": "Text"
+          "text": "Text",
+          "video": "video1"
         },
         {
-          "yaw": 0.9208737815866552,
-          "pitch": -0.1863471093271727,
-          "title": "p3",
-          "text": "Text"
-        },
-        {
-          "yaw": 1.9021318131345009,
-          "pitch": -0.1536744266112553,
-          "title": "p4",
-          "text": "Text"
+          "yaw": 2.2172379608328425,
+          "pitch": -0.13384865851106298,
+          "title": "p1",
+          "text": "Text",
+          "video": "video2"
         }
-      ]
+      ],
+      "linkHotspots": [],
+      "infoHotspots": []
     },
     {
       "id": "1-cafeteria_hinten",
@@ -472,7 +491,7 @@ var APP_DATA = {
   "name": "Project Title",
   "settings": {
     "mouseViewMode": "drag",
-    "autorotateEnabled": true,
+    "autorotateEnabled": false,
     "fullscreenButton": true,
     "viewControlButtons": true
   }

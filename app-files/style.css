@@ -29,7 +29,7 @@ html, body {
 }
 
 a, a:hover, a:active, a:visited {
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: inherit;
 }
 
@@ -827,4 +827,21 @@ body.view-control-buttons .viewControlButton {
 }
 .viewControlButton-6 {
   margin-left: 105px;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
