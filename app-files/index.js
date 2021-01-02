@@ -465,6 +465,7 @@
   function VideoScreenController (opts) {
     this.element = opts.element;
     this.videoElements = {};
+    this.videoData = {};
     this.currentVideo = null;
     this.currentVideoElement = null;
     this.orientation = opts.orientation;
@@ -475,11 +476,13 @@
       // Hide currently showing video
       if (self.currentVideo) {
         self.currentVideoElement.style.display = 'none';
+        self.currentVideoElement.pause();
       }
 
       // Swivel view to the screen
       scene.scene.lookTo(self.orientation, {}, function () {
         self.currentVideo = videoID;
+        self.currentVideoData = self.videoData[videoID];
         self.currentVideoElement = self.videoElements[videoID];
         if (!self.currentVideoElement) {
           console.error('Could not find video ', videoID, self.videoElements);
@@ -488,14 +491,28 @@
         self.currentVideoElement.style.display = 'block';
         self.currentVideoElement.classList.add('fade-in');
         self.currentVideoElement.pause(); 
-        self.currentVideoElement.currentTime = 0;
+        self.currentVideoElement.currentTime = self.currentVideoData.start || 0;
         setTimeout(function () {
           self.currentVideoElement.style.opacity = 1;
         }, 200)
-        // Start playback
+        function fadeOut() {
+          var video = self.currentVideoElement;
+          video.removeEventListener('ended', fadeOut);
+          video.classList.add('fade-out');
+          setTimeout(function () {
+            video.style.opacity = 0;
+          }, 200);
+          setTimeout(function () {
+            video.classList.remove('fade-out');
+            video.style.display = 'none';
+          }, 2000);
+        }
         setTimeout(function () {
-          self.currentVideoElement.classList.remove('fade-in');
+        // Start playback
+        self.currentVideoElement.classList.remove('fade-in');
           self.currentVideoElement.play();
+          self.currentVideoElement.addEventListener('ended', fadeOut);
+          self.currentVideoElement.addEventListener('pause', fadeOut);
         }, 1750);
       });
     };
@@ -515,7 +532,9 @@
     if (hotspot.type == 'video') {
       hotspot.videos.forEach(function (video) {
         var videoElement = document.createElement('video');
-        videoElement.style.display = 'none';
+        if (!video.show) {
+          videoElement.style.display = 'none';
+        }
         wrapper.appendChild(videoElement);
         videoElement.setAttribute("width", hotspot.width);
         videoElement.setAttribute("height", hotspot.height);
@@ -527,6 +546,7 @@
           videoElement.appendChild(sourceElement);
         });
         controller.videoElements[video.id] = videoElement;
+        controller.videoData[video.id] = video;
       });
     }
     

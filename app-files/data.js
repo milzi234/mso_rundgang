@@ -40,15 +40,16 @@ var APP_DATA = {
           "extraTransforms": "rotateY(-13deg) rotateX(10deg) rotate(-2.5deg)",
           "videos": [
             {
-              "id": "video1",
-              "title": "Platzhalter",
+              "id": "wel",
+              "start": 3,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Aula_WEL.mp4', type: "video/mp4"}
               ]
             },
             {
-              "id": "video2",
+              "id": "platzhalter",
               "title": "Platzhalter",
+              "start": 3,
               "sources": [
                 {src: '/assets/platzhalter.mp4', type: "video/mp4"}
               ]
@@ -58,18 +59,18 @@ var APP_DATA = {
       ],
       "videoTriggerHotspots": [
         {
-          "yaw": -0.69657059190056,
-          "pitch": -0.11867922708424317,
-          "title": "p2",
-          "text": "Text",
-          "video": "video1"
+          "yaw": -0.62657059190056,
+          "pitch": -0.05,
+          "title": "David Welfens",
+          "text": "Herr Welfens erzählt über das musikalische Angebot am MSO",
+          "video": "wel"
         },
         {
-          "yaw": 2.2172379608328425,
+          "yaw": 2.2672379608328425,
           "pitch": -0.13384865851106298,
-          "title": "p1",
-          "text": "Text",
-          "video": "video2"
+          "title": "LÖH",
+          "text": "TBD",
+          "video": "platzhalter"
         }
       ],
       "linkHotspots": [],
@@ -309,31 +310,48 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
-      "infoHotspots": [
+      "screens": [
         {
-          "yaw": -2.501127071650128,
+          "yaw": 2.965,
+          "pitch": -0.064,
+          "type": "video",
+          "width": 400, //"400", //"300",
+          "height": 300, //"300", //"240",
+          "radius": 420, //"420", // "820",
+          "videos": [
+            {
+              "id": "lio",
+              "sources": [
+                {src: '/assets/Kapelle_LIO.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "platzhalter",
+              "title": "Platzhalter",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
+      "linkHotspots": [],
+      "infoHotspots": [],
+      "videoTriggerHotspots": [
+        {
+          "yaw": -2.481127071650128,
           "pitch": -0.10269773357649647,
-          "title": "p1",
-          "text": "Text"
+          "title": "Michele Lionetti",
+          "text": "Christlich sein",
+          "video": "lio"
         },
         {
           "yaw": 2.220024173851053,
           "pitch": -0.13809533582966083,
-          "title": "p2",
-          "text": "Text"
-        },
-        {
-          "yaw": 2.9649384358830124,
-          "pitch": -0.06831961367058348,
-          "title": "p3",
-          "text": "Text"
-        },
-        {
-          "yaw": -0.1539688225877498,
-          "pitch": -0.15080210942764793,
-          "title": "p4",
-          "text": "Text"
+          "title": "SZW",
+          "text": "Als Christ aktiv sein",
+          "video": "platzhalter"
         }
       ]
     },
@@ -365,37 +383,73 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
-      "infoHotspots": [
+      "screens": [
         {
-          "yaw": -1.5443542769645013,
-          "pitch": -0.27672089446297576,
-          "title": "p1",
-          "text": "Text"
+          "yaw": 3,
+          "pitch": 0,
+          "type": "video",
+          "width": "355",
+          "height": "300",
+          "radius": "640",
+          "extraTransforms": "translateX(173px) translateY(-48px)",
+          "videos": [
+            {
+              "id": "fio",
+              "sources": [
+                {src: '/assets/R025_FIO.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "got",
+              "sources": [
+                {src: '/assets/R025_GOT.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        },
+        {
+          "id" : "pinnwand",
+          "yaw": -1.6,
+          "pitch": 0,
+          "type": "video",
+          "width": "660",
+          "height": "490",
+          "radius": "620",
+          "videos": [
+            {
+              "id": "unterricht",
+              "start": 3,
+              "sources": [
+                {src: '/assets/R025_Unterricht.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
+      "linkHotspots": [],
+      "infoHotspots": [],
+      "videoTriggerHotspots": [
+        {
+          "yaw": -1.7943542769645013,
+          "pitch": -0.43672089446297576,
+          "title": "Die Waldritter",
+          "text": "Peter Gotthardt über die Zusammenarbeit mit den Waldrittern",
+          "video": "got"
         },
         {
           "yaw": 2.532264871860624,
           "pitch": 0.009982595662954452,
-          "title": "p2",
-          "text": "Text"
+          "title": "Laura Fiorentino-Gatzka",
+          "text": "Klassenraum R025",
+          "video": "fio"
         },
         {
-          "yaw": -3.0308989036292147,
-          "pitch": -0.07983049629260464,
-          "title": "p3",
-          "text": "Text"
-        },
-        {
-          "yaw": 0.4587570173966995,
-          "pitch": -0.27539359174001277,
-          "title": "p5",
-          "text": "Text"
-        },
-        {
-          "yaw": -1.2960798607887263,
+          "yaw": -1.3960798607887263,
           "pitch": -0.011423580121856958,
-          "title": "p6",
-          "text": "Text"
+          "title": "Unterricht",
+          "text": "Unterricht der fünften Klassen",
+          "video": "unterricht",
+          "screen": "pinnwand"
         }
       ]
     },
@@ -427,25 +481,60 @@ var APP_DATA = {
         "pitch": 0.02057625117156192,
         "fov": 0.9420983572121656
       },
+      "screens": [
+        {
+          "yaw": -1.3,
+          "pitch": 0,
+          "type": "video",
+          "width": "640",
+          "height": "480",
+          "radius": "640",
+          "videos": [
+            {
+              "id": "spe",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Kunstraum_SPE.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fenster",
+          "yaw": -2.8,
+          "pitch": 0,
+          "type": "video",
+          "width": "800",
+          "height": "600",
+          "radius": "800",
+          "extraTransforms": "translateY(-130px)",
+          "videos": [
+            {
+              "id": "kunst",
+              "sources": [
+                {src: '/assets/Kunstraum_KunstAnDerMSO.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
       "linkHotspots": [],
-      "infoHotspots": [
+      "infoHotspots": [],
+      "videoTriggerHotspots": [
         {
           "yaw": -1.687471544390208,
           "pitch": -0.11136764832008872,
-          "title": "p1",
-          "text": "Text"
+          "title": "Heike Spennrath-Werges",
+          "text": "Kunstunterricht an der MSO",
+          "video": "spe"
         },
         {
-          "yaw": -0.1801220597540638,
+          "yaw": -0.1201220597540638,
           "pitch": -0.19826109632295896,
-          "title": "p2",
-          "text": "Text"
-        },
-        {
-          "yaw": 1.3772390700382644,
-          "pitch": -0.28997722602717957,
-          "title": "p3",
-          "text": "Text"
+          "title": "Kunst",
+          "text": "Kunst an der MSO",
+          "screen": "fenster",
+          "video": "kunst"
         }
       ]
     },
