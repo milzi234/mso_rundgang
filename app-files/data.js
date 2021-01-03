@@ -37,7 +37,7 @@ var APP_DATA = {
           "width": "320",
           "height": "240",
           "radius": "450",
-          "extraTransforms": "rotateY(-13deg) rotateX(10deg) rotate(-2.5deg)",
+          "extraTransforms": "rotateY(-13deg) rotateX(12deg) rotate(-2.5deg)",
           "videos": [
             {
               "id": "wel",
@@ -47,8 +47,21 @@ var APP_DATA = {
               ]
             },
             {
-              "id": "platzhalter",
-              "title": "Platzhalter",
+              "id": "löh",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "szenisches_spiel",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "konzert",
               "start": 3,
               "sources": [
                 {src: '/assets/platzhalter.mp4', type: "video/mp4"}
@@ -70,7 +83,21 @@ var APP_DATA = {
           "pitch": -0.13384865851106298,
           "title": "LÖH",
           "text": "TBD",
-          "video": "platzhalter"
+          "video": "löh"
+        },
+        {
+          "yaw": -1.673,
+          "pitch": -0.125,
+          "title": "Szenisches Spiel",
+          "text": "",
+          "video": "szenisches_spiel"
+        },
+        {
+          "yaw": -2.406,
+          "pitch": -0.201,
+          "title": "Konzert",
+          "text": "",
+          "video": "konzert"
         }
       ],
       "linkHotspots": [],
@@ -154,31 +181,77 @@ var APP_DATA = {
         "pitch": 0.07495119024798313,
         "fov": 0.9420983572121656
       },
+      "screens": [
+        {
+          "yaw": -1.68,
+          "pitch": 0,
+          "type": "video",
+          "width": "420",
+          "height": "340",
+          "radius": "450",
+          "extraTransforms": "translateX(-100px) translateY(-80px)",
+          "videos": [
+            {
+              "id": "nol",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Naturwissenschaftsraum_NOL.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "ras",
+              "start": 0.9,
+              "sources": [
+                {src: '/assets/Naturwissenschaftsraum_RAS.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "unterricht",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "polen",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
       "linkHotspots": [],
-      "infoHotspots": [
+      "infoHotspots": [],
+      "videoTriggerHotspots": [
         {
           "yaw": -0.31741392534359036,
-          "pitch": -0.02337668561827222,
-          "title": "p1",
-          "text": "Text"
+          "pitch": -0.07337668561827222,
+          "title": "Matthias Nolte",
+          "text": "Biologie & Chemie",
+          "video": "nol"
         },
         {
-          "yaw": 1.193504277916544,
-          "pitch": -0.2610330705240944,
-          "title": "p2",
-          "text": "Text"
+          "yaw": 0.65,
+          "pitch": 0.02,
+          "title": "Ulrich Rasbach",
+          "text": "Mathematik & Physik",
+          "video": "ras"
         },
         {
-          "yaw": 1.20810096701166,
-          "pitch": 0.04097955200757397,
-          "title": "p3",
-          "text": "Text"
+          "yaw": -0.820,
+          "pitch": 0.0377,
+          "title": "NW Unterricht",
+          "text": "TBD",
+          "video": "unterricht"
         },
         {
-          "yaw": 0.3125289175775343,
-          "pitch": -0.14905195724804443,
-          "title": "p4",
-          "text": "Text"
+          "yaw": 1.460,
+          "pitch": -0.180,
+          "title": "Polen-Austausch",
+          "text": "TBD",
+          "video": "polen"
         }
       ]
     },
@@ -210,25 +283,74 @@ var APP_DATA = {
         "pitch": 0.10619691364797568,
         "fov": 0.9420983572121656
       },
-      "linkHotspots": [],
-      "infoHotspots": [
+      "screens": [
         {
-          "yaw": 1.9125108577652359,
-          "pitch": 0.16733582274142123,
-          "title": "p1",
-          "text": "Text"
+          "yaw": -2.955,
+          "pitch": 0,
+          "viewOrientation": {yaw: -2.636, pitch: -0.036 },
+          "type": "video",
+          "width": "620",
+          "height": "340",
+          "radius": "450",
+          "extraTransforms": "translateX(600px) translateY(-20px)",
+          "videos": [
+            {
+              "id": "küh",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "unterricht",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
         },
         {
+          "id": "schwebend",
           "yaw": -1.3503855313117104,
           "pitch": 0.21684099679843882,
-          "title": "p2",
-          "text": "Text"
+          "type": "video",
+          "width": "620",
+          "height": "340",
+          "radius": "450",
+          "videos": [
+            {
+              "id": "ausstattung",
+              "sources": [
+                {src: '/assets/Computerraum_DigitaleAusstattung.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
+      "linkHotspots": [],
+      "infoHotspots": [],
+      "videoTriggerHotspots":[
+        {
+          "yaw": 1.946,
+          "pitch": 0,
+          "title": "Computerraum",
+          "text": "Digitale Ausstattung",
+          "video": "ausstattung"
         },
         {
-          "yaw": -2.901525427931709,
-          "pitch": 0.02691060966555625,
-          "title": "p3",
-          "text": "Text"
+          "yaw": -2.95,
+          "pitch": 0.120,
+          "title": "Matthias Kühnert",
+          "text": "TBD",
+          "video": "küh"
+        },
+        {
+          "yaw": -1.150,
+          "pitch": 0.401,
+          "title": "Informatikunterricht",
+          "text": "TBD",
+          "video": "unterricht"
         }
       ]
     },
@@ -260,26 +382,75 @@ var APP_DATA = {
         "pitch": 0.08778513881502548,
         "fov": 0.9420983572121656
       },
-      "linkHotspots": [],
-      "infoHotspots": [
+      "screens": [
         {
-          "yaw": -1.0098353578576518,
-          "pitch": -0.013717127246199112,
-          "title": "p1",
-          "text": "Text"
+          "yaw": 0.76,
+          "pitch": 0,
+          "type": "video",
+          "width": "280",
+          "height": "240",
+          "radius": "450",
+          "extraTransforms": "translateX(-290px) translateY(-15px)",
+          "videos": [
+            {
+              "id": "böh",
+              "sources": [
+                {src: '/assets/Foyer_BÖH.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "scu",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Foyer_SCU.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
         },
         {
-          "yaw": 0.4128059050609849,
-          "pitch": -0.012316011358988632,
-          "title": "p2",
-          "text": "Text"
+          "id": "treppenhaus",
+          "yaw": 2.25,
+          "pitch": -1.2,
+          "type": "video",
+          "width": "800",
+          "height": "600",
+          "radius": "600",
+          "videos": [
+            {
+              "id": "treppenhaus",
+              "sources": [
+                {src: '/assets/Foyer_Treppenhaus.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        }
+      ],
+      "linkHotspots": [],
+      "infoHotspots": [],
+      "videoTriggerHotspots": [
+        {
+          "yaw": -0.9598353578576518,
+          "pitch": -0.043717127246199112,
+          "title": "Sarah Schulte",
+          "text": "Bienen & Garten AG",
+          "video": "scu"
         },
         {
           "yaw": 2.364551019078739,
           "pitch": 0.1351655317603644,
-          "title": "p3",
-          "text": "Text"
+          "title": "Katrin Böhlefeld",
+          "text": "Fair-Trade AG",
+          "video": "böh"
+        },
+        {
+          "yaw": 2.364551019078739,
+          "pitch": -0.5,
+          "title": "Trepp auf!",
+          "text": "",
+          "video": "treppenhaus",
+          "screen": "treppenhaus"
         }
+
       ]
     },
     {
@@ -326,8 +497,21 @@ var APP_DATA = {
               ]
             },
             {
-              "id": "platzhalter",
-              "title": "Platzhalter",
+              "id": "szw",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "fruehmesse",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "misereor",
               "start": 3,
               "sources": [
                 {src: '/assets/platzhalter.mp4', type: "video/mp4"}
@@ -351,7 +535,21 @@ var APP_DATA = {
           "pitch": -0.13809533582966083,
           "title": "SZW",
           "text": "Als Christ aktiv sein",
-          "video": "platzhalter"
+          "video": "szw"
+        },
+        {
+          "yaw": -1.066,
+          "pitch": 0.194,
+          "title": "Frühmesse",
+          "text": "TBD",
+          "video": "fruehmesse"
+        },
+        {
+          "yaw": 0.341,
+          "pitch": 0.055,
+          "title": "Misereor",
+          "text": "TBD",
+          "video": "misereor"
         }
       ]
     },
@@ -404,6 +602,13 @@ var APP_DATA = {
               "sources": [
                 {src: '/assets/R025_GOT.mp4', type: "video/mp4"}
               ]
+            },
+            {
+              "id": "erste_tage",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
             }
           ]
         },
@@ -450,6 +655,13 @@ var APP_DATA = {
           "text": "Unterricht der fünften Klassen",
           "video": "unterricht",
           "screen": "pinnwand"
+        },
+        {
+          "yaw": 0.680,
+          "pitch":  0.164,
+          "title": "Erste Tage",
+          "text": "Erste Tage an der MSO",
+          "video": "erste_tage",
         }
       ]
     },
@@ -519,7 +731,14 @@ var APP_DATA = {
         }
       ],
       "linkHotspots": [],
-      "infoHotspots": [],
+      "infoHotspots": [
+        {
+          "yaw": 1.840,
+          "pitch": 0.0416,
+          "title": "Ausstellung LK",
+          "text": "TBD",
+        }
+      ],
       "videoTriggerHotspots": [
         {
           "yaw": -1.687471544390208,
@@ -566,18 +785,115 @@ var APP_DATA = {
         "pitch": -0.03527357343697446,
         "fov": 0.9420983572121656
       },
-      "linkHotspots": [],
-      "infoHotspots": [
+      "screens": [
         {
-          "yaw": -0.9567891604015237,
-          "pitch": 0.07168437907955649,
-          "title": "p1",
-          "text": "Text"
+          "yaw": -3.14,
+          "pitch": 0,
+          "viewOrientation": {yaw: -3.14, pitch: -0.105},
+          "type": "video",
+          "width": "600",
+          "height": "400",
+          "radius": "640",
+          "extraTransforms": "translateX(-160px) translateY(-200px) rotate(1deg)",
+          "videos": [
+            {
+              "id": "adr",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Sporthalle_ADR.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        },
+      ],
+      "linkHotspots": [],
+      "infoHotspots": [],
+      "videoTriggerHotspots": [
+        {
+          "yaw": -1.5489979825977365,
+          "pitch": -0.11911588710149523,
+          "title": "Oliver Adrian",
+          "text": "Vorstellung",
+          "video": "adr"
         }
       ]
+    },
+    {
+      "id": "9-cafteria",
+      "name": "Caféteria",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1344,
+      "initialViewParameters": {
+        "yaw": 2.6886092765645486,
+        "pitch": 0.08909842134308121,
+        "fov": 1.3399983960584583
+      },
+      "screens": [
+        {
+          "yaw": -0.8,
+          "pitch": 0,
+          "type": "video",
+          "width": "600",
+          "height": "400",
+          "radius": "640",
+          "extraTransforms": "rotateY(5deg)",
+          "videos": [
+            {
+              "id": "wurms",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Cafeteria_Wurms.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "erziehungsgemeinschaft",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        },
+      ],
+      "linkHotspots": [],
+      "videoTriggerHotspots": [
+        {
+          "yaw": -1.7535644883281982,
+          "pitch": -0.1888531946067964,
+          "title": "Andreas Wurms & Nina Strauch",
+          "text": "Über die Caféteria",
+          "video": "wurms"
+        },
+        {
+          "yaw": -2.121290862358588,
+          "pitch": 0.07252764582686311,
+          "title": "Erziehungsgemeinschaft",
+          "text": "TBD",
+          "video": "erziehungsgemeinschaft"
+        }
+      ],
+      "infoHotspots": []
     }
   ],
-  "name": "Project Title",
+  "name": "Virtueller Rundgang MSO",
   "settings": {
     "mouseViewMode": "drag",
     "autorotateEnabled": false,
