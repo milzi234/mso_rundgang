@@ -209,6 +209,11 @@
     updateSceneName(scene);
     updateSceneList(scene);
     window.scene = scene;
+    setTimeout(function () {
+      for (var [id, screen] of Object.entries(scene.screens)) {
+        screen.preload();
+      }
+    }, 200);
   }
 
   function updateSceneName(scene) {
@@ -469,6 +474,12 @@
     this.currentVideo = null;
     this.currentVideoElement = null;
     this.orientation = opts.orientation;
+  }
+
+  VideoScreenController.prototype.preload = function () {
+    for (var [id, videoElement] of Object.entries(this.videoElements)) {
+      videoElement.setAttribute('preload', 'auto');
+    }
   }
 
   VideoScreenController.prototype.play = function (videoID) {
