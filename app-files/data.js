@@ -336,7 +336,8 @@ var APP_DATA = {
           "pitch": 0,
           "title": "Computerraum",
           "text": "Digitale Ausstattung",
-          "video": "ausstattung"
+          "video": "ausstattung",
+          "screen": "schwebend"
         },
         {
           "yaw": -2.95,
