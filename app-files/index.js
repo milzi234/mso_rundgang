@@ -285,7 +285,7 @@
     var transformProperties = [ '-ms-transform', '-webkit-transform', 'transform' ];
     for (var i = 0; i < transformProperties.length; i++) {
       var property = transformProperties[i];
-      icon.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
+      icon.style[property] = 'rotate(' + hotspot.rotation + 'deg)';
     }
 
     // Add click event handler.
@@ -521,6 +521,9 @@
         setTimeout(function () {
         // Start playback
         self.currentVideoElement.classList.remove('fade-in');
+          if (self.currentVideoData.volume) {
+            self.currentVideoElement.volume = self.currentVideoData.volume;
+          }
           self.currentVideoElement.play();
           self.currentVideoElement.addEventListener('ended', fadeOut);
           self.currentVideoElement.addEventListener('pause', fadeOut);

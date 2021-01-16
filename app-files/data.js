@@ -48,16 +48,21 @@ var APP_DATA = {
             },
             {
               "id": "löh",
-              "start": 3,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Aula_LÖH.mp4', type: "video/mp4"}
               ]
             },
             {
               "id": "szenisches_spiel",
-              "start": 3,
+              "volume": 0.5,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Aula_SzenischesSpiel.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "disco",
+              "sources": [
+                {src: '/assets/Aula_Disco.mp4', type: "video/mp4"}
               ]
             },
             {
@@ -65,6 +70,25 @@ var APP_DATA = {
               "start": 3,
               "sources": [
                 {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        },
+        {
+          "id" : "nah",
+          "yaw": 1.7861318131345009,
+          "pitch": -0.25744266112553,
+          "viewOrientation": {yaw: 2, pitch: 0},
+          "type": "video",
+          "width": "320",
+          "height": "240",
+          "radius": "250",
+          "extraTransforms": "rotateY(-13deg) rotateX(12deg) rotate(-2.5deg)",
+          "videos": [
+            {
+              "id": "disco",
+              "sources": [
+                {src: '/assets/Aula_Disco.mp4', type: "video/mp4"}
               ]
             }
           ]
@@ -82,15 +106,23 @@ var APP_DATA = {
           "yaw": 2.2672379608328425,
           "pitch": -0.13384865851106298,
           "title": "LÖH",
-          "text": "TBD",
+          "text": "Frau Löhr über Theater an der MSO",
           "video": "löh"
         },
         {
           "yaw": -1.673,
           "pitch": -0.125,
           "title": "Szenisches Spiel",
-          "text": "",
+          "text": "Ausschnitte",
           "video": "szenisches_spiel"
+        },
+        {
+          "yaw": 1.733,
+          "pitch": -0.615,
+          "title": "???",
+          "text": "",
+          "video": "disco",
+          "screen": "nah"
         },
         {
           "yaw": -2.406,
@@ -215,8 +247,9 @@ var APP_DATA = {
             {
               "id": "polen",
               "start": 3,
+              "volume": 0.5,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Naturwissenschaftsraum_Polen.mp4', type: "video/mp4"}
               ]
             }
           ]
@@ -249,8 +282,8 @@ var APP_DATA = {
         {
           "yaw": 1.460,
           "pitch": -0.180,
-          "title": "Polen-Austausch",
-          "text": "TBD",
+          "title": "Polen Austausch",
+          "text": "Ein Chemieprojekt",
           "video": "polen"
         }
       ]
@@ -295,13 +328,6 @@ var APP_DATA = {
           "extraTransforms": "translateX(600px) translateY(-20px)",
           "videos": [
             {
-              "id": "küh",
-              "start": 3,
-              "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
-              ]
-            },
-            {
               "id": "unterricht",
               "start": 3,
               "sources": [
@@ -320,6 +346,13 @@ var APP_DATA = {
           "radius": "450",
           "videos": [
             {
+              "id": "küh",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Computerraum_KÜH.mp4', type: "video/mp4"}
+              ]
+            },
+            {
               "id": "ausstattung",
               "sources": [
                 {src: '/assets/Computerraum_DigitaleAusstattung.mp4', type: "video/mp4"}
@@ -334,8 +367,8 @@ var APP_DATA = {
         {
           "yaw": 1.946,
           "pitch": 0,
-          "title": "Computerraum",
-          "text": "Digitale Ausstattung",
+          "title": "Digitale Ausstattung",
+          "text": "",
           "video": "ausstattung",
           "screen": "schwebend"
         },
@@ -343,8 +376,9 @@ var APP_DATA = {
           "yaw": -2.95,
           "pitch": 0.120,
           "title": "Matthias Kühnert",
-          "text": "TBD",
-          "video": "küh"
+          "text": "Matthias Kühnert über den Informatikunterricht",
+          "video": "küh",
+          "screen": "schwebend"
         },
         {
           "yaw": -1.150,
@@ -379,19 +413,19 @@ var APP_DATA = {
       ],
       "faceSize": 1344,
       "initialViewParameters": {
-        "yaw": -0.072,
-        "pitch": -0.0349,
+        "yaw": -2.88,
+        "pitch": 0.13,
         "fov": 0.9420983572121656
       },
       "screens": [
         {
-          "yaw": 0.76,
-          "pitch": 0,
+          "yaw": -3.05,
+          "pitch": -0.495,
           "type": "video",
-          "width": "280",
-          "height": "240",
-          "radius": "450",
-          "extraTransforms": "translateX(-290px) translateY(-15px)",
+          "width": "800",
+          "height": "600",
+          "radius": "600",
+          "viewOrientation": {yaw: -3.030, pitch: -0.191},
           "videos": [
             {
               "id": "böh",
@@ -405,53 +439,73 @@ var APP_DATA = {
               "sources": [
                 {src: '/assets/Foyer_SCU.mp4', type: "video/mp4"}
               ]
-            }
-          ]
-        },
-        {
-          "id": "treppenhaus",
-          "yaw": 2.25,
-          "pitch": -1.2,
-          "type": "video",
-          "width": "800",
-          "height": "600",
-          "radius": "600",
-          "videos": [
+            },
+            {
+              "id": "ankommen",
+              "sources": [
+                {src: '/assets/Foyer_Ankommen.mp4', type: "video/mp4"}
+              ]
+            },
             {
               "id": "treppenhaus",
               "sources": [
                 {src: '/assets/Foyer_Treppenhaus.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "maske",
+              "sources": [
+                {src: '/assets/Foyer_Maske.mp4', type: "video/mp4"}
               ]
             }
           ]
         }
       ],
       "linkHotspots": [],
-      "infoHotspots": [],
+      "infoHotspots": [
+        {
+          yaw: -1.590,
+          pitch: -0.5192,
+          title: "Medienscout Schule",
+          text: '<img src="assets/Foyer_Medienscouts.png" width="400rem"></img>'
+        }
+      ],
       "videoTriggerHotspots": [
         {
-          "yaw": -0.9598353578576518,
-          "pitch": -0.043717127246199112,
+          "yaw": 2.90,
+          "pitch": 0.05,
+          "title": "Ankommen an der MSO",
+          "text": "Johnny, Herr Lowinski und Frau Spennrath-Werges",
+          "video": "ankommen"
+        },
+        {
+          "yaw":0.090,
+          "pitch": -0.050,
           "title": "Sarah Schulte",
           "text": "Bienen & Garten AG",
           "video": "scu"
         },
         {
-          "yaw": 2.364551019078739,
-          "pitch": 0.1351655317603644,
+          "yaw": 0.605,
+          "pitch": -0.075,
           "title": "Katrin Böhlefeld",
           "text": "Fair-Trade AG",
           "video": "böh"
         },
         {
-          "yaw": 2.364551019078739,
-          "pitch": -0.5,
+          "yaw": -2.410,
+          "pitch": -0.18,
           "title": "Trepp auf!",
           "text": "",
           "video": "treppenhaus",
-          "screen": "treppenhaus"
+        },
+        {
+          "yaw": 1.909,
+          "pitch": -0.17,
+          "title": "???",
+          "text": "",
+          "video": "maske",
         }
-
       ]
     },
     {
@@ -487,9 +541,9 @@ var APP_DATA = {
           "yaw": 2.965,
           "pitch": -0.064,
           "type": "video",
-          "width": 400, //"400", //"300",
-          "height": 300, //"300", //"240",
-          "radius": 420, //"420", // "820",
+          "width": 400, 
+          "height": 300, 
+          "radius": 420, 
           "videos": [
             {
               "id": "lio",
@@ -499,9 +553,14 @@ var APP_DATA = {
             },
             {
               "id": "szw",
-              "start": 3,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Kapelle_SZW.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "teddy",
+              "sources": [
+                {src: '/assets/Kapelle_Teddy.mp4', type: "video/mp4"}
               ]
             },
             {
@@ -534,9 +593,16 @@ var APP_DATA = {
         {
           "yaw": 2.220024173851053,
           "pitch": -0.13809533582966083,
-          "title": "SZW",
+          "title": "Ansgar Swierczynski",
           "text": "Als Christ aktiv sein",
           "video": "szw"
+        },
+        {
+          "yaw": -2.747,
+          "pitch": 0.305,
+          "title": "???",
+          "text": "",
+          "video": "teddy"
         },
         {
           "yaw": -1.066,
@@ -603,13 +669,6 @@ var APP_DATA = {
               "sources": [
                 {src: '/assets/R025_GOT.mp4', type: "video/mp4"}
               ]
-            },
-            {
-              "id": "erste_tage",
-              "start": 3,
-              "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
-              ]
             }
           ]
         },
@@ -633,7 +692,14 @@ var APP_DATA = {
         }
       ],
       "linkHotspots": [],
-      "infoHotspots": [],
+      "infoHotspots": [
+        {
+          yaw: -0.796,
+          pitch: 0.065,
+          title: "Erste Tage an der MSO",
+          text: '<audio src="assets/R025_ErsteTage.mp3" controls></audio>'
+        }
+      ],
       "videoTriggerHotspots": [
         {
           "yaw": -1.7943542769645013,
@@ -656,13 +722,6 @@ var APP_DATA = {
           "text": "Unterricht der fünften Klassen",
           "video": "unterricht",
           "screen": "pinnwand"
-        },
-        {
-          "yaw": 0.680,
-          "pitch":  0.164,
-          "title": "Erste Tage",
-          "text": "Erste Tage an der MSO",
-          "video": "erste_tage",
         }
       ]
     },
@@ -727,6 +786,12 @@ var APP_DATA = {
               "sources": [
                 {src: '/assets/Kunstraum_KunstAnDerMSO.mp4', type: "video/mp4"}
               ]
+            },
+            {
+              "id": "maske",
+              "sources": [
+                {src: '/assets/Kunstraum_Maske.mp4', type: "video/mp4"}
+              ]
             }
           ]
         }
@@ -737,7 +802,13 @@ var APP_DATA = {
           "yaw": 1.840,
           "pitch": 0.0416,
           "title": "Ausstellung LK",
-          "text": "TBD",
+          "text": '<a href="https://spark.adobe.com/page/PEFR6Q2qLBrBJ/" target="_blank">Hier geht\'s zur Ausstellung</a>',
+        },
+        {
+          "yaw": -1.141,
+          "pitch": -0.288,
+          "title": "Kreativ-AG",
+          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/WJEoIThEeCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         }
       ],
       "videoTriggerHotspots": [
@@ -755,6 +826,14 @@ var APP_DATA = {
           "text": "Kunst an der MSO",
           "screen": "fenster",
           "video": "kunst"
+        },
+        {
+          "yaw": 0.661,
+          "pitch": 0.111,
+          "title": "???",
+          "text": "",
+          "screen": "fenster",
+          "video": "maske"
         }
       ]
     },
@@ -803,19 +882,53 @@ var APP_DATA = {
               "sources": [
                 {src: '/assets/Sporthalle_ADR.mp4', type: "video/mp4"}
               ]
+            },
+            {
+              "id": "sportunterricht",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "schuh",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Sporthalle_Schuh.mp4', type: "video/mp4"}
+              ]
             }
           ]
         },
       ],
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -1.0961,
+          "pitch": -0.1699,
+          "target": "11-sporthalle-offen",
+        }
+      ],
       "infoHotspots": [],
       "videoTriggerHotspots": [
         {
-          "yaw": -1.5489979825977365,
+          "yaw": -1.7489979825977365,
           "pitch": -0.11911588710149523,
           "title": "Oliver Adrian",
           "text": "Vorstellung",
           "video": "adr"
+        },
+        {
+          "yaw": -0.617,
+          "pitch": -0.113,
+          "title": "Sportunterricht",
+          "text": "TBD",
+          "video": "sportunterricht"
+        },
+        {
+          "yaw": -3.195,
+          "pitch": 0.230,
+          "title": "???",
+          "text": "",
+          "video": "schuh"
         }
       ]
     },
@@ -843,8 +956,8 @@ var APP_DATA = {
       ],
       "faceSize": 1344,
       "initialViewParameters": {
-        "yaw": 2.6886092765645486,
-        "pitch": 0.08909842134308121,
+        "yaw": -2.8528881382342153,
+        "pitch": 0.05443002103066519,
         "fov": 1.3399983960584583
       },
       "screens": [
@@ -865,7 +978,21 @@ var APP_DATA = {
               ]
             },
             {
-              "id": "erziehungsgemeinschaft",
+              "id": "ümi",
+              "start": 3,
+              "sources": [
+                {src: '/assets/Cafeteria_ÜMI.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "banane",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "cisco",
               "start": 3,
               "sources": [
                 {src: '/assets/platzhalter.mp4', type: "video/mp4"}
@@ -884,14 +1011,135 @@ var APP_DATA = {
           "video": "wurms"
         },
         {
+          "yaw": -0.903,
+          "pitch": -0.614,
+          "title": "Nachmittagsbetreuung",
+          "text": "Frau Kötter-Röhl & Frau Brab über die Nachmittagsbetreuung",
+          "video": "ümi"
+        },
+        {
+          "yaw": 2.601,
+          "pitch": 0.307,
+          "title": "???",
+          "text": "TBD",
+          "video": "banane"
+        },
+        {
+          "yaw": 1.0496,
+          "pitch": -0.107,
+          "title": "???",
+          "text": "",
+          "video": "cisco"
+        }
+      ],
+      "infoHotspots": [
+        {
           "yaw": -2.121290862358588,
           "pitch": 0.07252764582686311,
           "title": "Erziehungsgemeinschaft",
+          "text": '<audio src="assets/Cafeteria_Erziehungsgemeinschaft.mp3" controls></audio>',
+        }
+      ]
+    },
+    {
+      "id": "10-artrium",
+      "name": "Artrium",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1344,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "screens": [
+        {
+          "yaw": 0.875,
+          "pitch": 0,
+          "type": "video",
+          "width": "720",
+          "height": "400",
+          "radius": "640",
+          "extraTransforms": "translateY(-121px) rotate(1deg)",
+          "videos": [
+            {
+              "id": "schülerrat",
+              "start": 3,
+              "sources": [
+                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            }
+          ]
+        },
+      ],
+      "linkHotspots": [],
+      "videoTriggerHotspots": [
+        {
+          "yaw": 2.521339919586479,
+          "pitch": -0.13539492991372626,
+          "title": "Schülerrat",
           "text": "TBD",
-          "video": "erziehungsgemeinschaft"
+          "video": "schülerrat"
         }
       ],
       "infoHotspots": []
+    },
+    {
+      "id": "11-sporthalle-offen",
+      "name": "Sporthalle (geöffnet)",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1344,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.08168213719584827,
+          "pitch": -0.60142744620474,
+          "target": "8-sporthalle",
+          "rotation": 180
+        }
+      ],
+      "infoHotspots": [
+        
+      ]
     }
   ],
   "name": "Virtueller Rundgang MSO",
