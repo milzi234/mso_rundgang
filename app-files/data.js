@@ -764,7 +764,7 @@ var APP_DATA = {
           "videos": [
             {
               "id": "spe",
-              "start": 3,
+              "start": 2,
               "sources": [
                 {src: '/assets/Kunstraum_SPE.mp4', type: "video/mp4"}
               ]
@@ -799,8 +799,8 @@ var APP_DATA = {
       "linkHotspots": [],
       "infoHotspots": [
         {
-          "yaw": 1.840,
-          "pitch": 0.0416,
+          "yaw": 1.3548403065846681,
+          "pitch": -0.19999805497620393,
           "title": "Ausstellung LK",
           "text": '<a href="https://spark.adobe.com/page/PEFR6Q2qLBrBJ/" target="_blank">Hier geht\'s zur Ausstellung</a>',
         },
