@@ -425,7 +425,7 @@ var APP_DATA = {
           "width": "800",
           "height": "600",
           "radius": "600",
-          "viewOrientation": {yaw: -3.030, pitch: -0.191},
+          "viewOrientation": {yaw: -3.053935944027348, pitch: -0.32797258728433754},
           "videos": [
             {
               "id": "böh",
