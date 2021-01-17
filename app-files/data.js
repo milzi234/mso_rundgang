@@ -67,9 +67,9 @@ var APP_DATA = {
             },
             {
               "id": "konzert",
-              "start": 3,
+              "start": 0,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Aula_Konzert.mp4', type: "video/mp4"}
               ]
             }
           ]
@@ -105,8 +105,8 @@ var APP_DATA = {
         {
           "yaw": 2.2672379608328425,
           "pitch": -0.13384865851106298,
-          "title": "LÖH",
-          "text": "Frau Löhr über Theater an der MSO",
+          "title": "Monika Löhr",
+          "text": "Monika Löhr über Theater an der MSO",
           "video": "löh"
         },
         {
@@ -127,7 +127,7 @@ var APP_DATA = {
         {
           "yaw": -2.406,
           "pitch": -0.201,
-          "title": "Konzert",
+          "title": "Konzertausschnitte",
           "text": "",
           "video": "konzert"
         }
@@ -391,7 +391,7 @@ var APP_DATA = {
     },
     {
       "id": "4-eingangshalle",
-      "name": "Eingangshalle",
+      "name": "Foyer",
       "levels": [
         {
           "tileSize": 256,
@@ -467,7 +467,7 @@ var APP_DATA = {
           yaw: -1.590,
           pitch: -0.5192,
           title: "Medienscout Schule",
-          text: '<img src="assets/Foyer_Medienscouts.png" width="400rem"></img>'
+          text: '<a href="https://www.medienscouts-nrw.de/" target="_blank"><img src="assets/Foyer_Medienscouts.png" width="400rem"></img></a>'
         }
       ],
       "videoTriggerHotspots": [
@@ -488,8 +488,8 @@ var APP_DATA = {
         {
           "yaw": 0.605,
           "pitch": -0.075,
-          "title": "Katrin Böhlefeld",
-          "text": "Fair-Trade AG",
+          "title": "Fair-Trade AG",
+          "text": "Katrin Böhlefeld & Oliver Adrian",
           "video": "böh"
         },
         {
@@ -532,8 +532,8 @@ var APP_DATA = {
       ],
       "faceSize": 1344,
       "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
+        "pitch": -0.09172343195057309,
+        "yaw": -3.1085031841712016,
         "fov": 1.5707963267948966
       },
       "screens": [
@@ -562,26 +562,25 @@ var APP_DATA = {
               "sources": [
                 {src: '/assets/Kapelle_Teddy.mp4', type: "video/mp4"}
               ]
-            },
-            {
-              "id": "fruehmesse",
-              "start": 3,
-              "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
-              ]
-            },
-            {
-              "id": "misereor",
-              "start": 3,
-              "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
-              ]
             }
           ]
         }
       ],
       "linkHotspots": [],
-      "infoHotspots": [],
+      "infoHotspots": [
+        {
+          "yaw": -1.066,
+          "pitch": 0.194,
+          "title": "Frühmesse",
+          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/sj9jKlQ0Spc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        },
+        {
+          "yaw": 0.341,
+          "pitch": 0.055,
+          "title": "Misereor",
+          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/90UMNYqPuYE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        }
+      ],
       "videoTriggerHotspots": [
         {
           "yaw": -2.481127071650128,
@@ -603,20 +602,6 @@ var APP_DATA = {
           "title": "???",
           "text": "",
           "video": "teddy"
-        },
-        {
-          "yaw": -1.066,
-          "pitch": 0.194,
-          "title": "Frühmesse",
-          "text": "TBD",
-          "video": "fruehmesse"
-        },
-        {
-          "yaw": 0.341,
-          "pitch": 0.055,
-          "title": "Misereor",
-          "text": "TBD",
-          "video": "misereor"
         }
       ]
     },
@@ -683,9 +668,16 @@ var APP_DATA = {
           "videos": [
             {
               "id": "unterricht",
-              "start": 3,
+              "start": 0,
               "sources": [
                 {src: '/assets/R025_Unterricht.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "weihnachten",
+              "start": 0,
+              "sources": [
+                {src: '/assets/R025_Weihnachten.mp4', type: "video/mp4"}
               ]
             }
           ]
@@ -698,6 +690,12 @@ var APP_DATA = {
           pitch: 0.065,
           title: "Erste Tage an der MSO",
           text: '<audio src="assets/R025_ErsteTage.mp3" controls></audio>'
+        },
+        {
+          yaw: -2.632339409246237,
+          pitch: -0.12115632964260925,
+          title: "Stundenplan",
+          text: '<a href="assets/R025_Stundenplan.png" target="_blank"><img src="assets/R025_Stundenplan.png" width="600rem"></img></a>'
         }
       ],
       "videoTriggerHotspots": [
@@ -719,8 +717,16 @@ var APP_DATA = {
           "yaw": -1.3960798607887263,
           "pitch": -0.011423580121856958,
           "title": "Unterricht",
-          "text": "Unterricht der fünften Klassen",
+          "text": "Unterrichtsimpression der fünften Klassen",
           "video": "unterricht",
+          "screen": "pinnwand"
+        },
+        {
+          "yaw": -0.37692343503508674,
+          "pitch": 0.0277401988616107,
+          "title": "Weihnachten 2020",
+          "text": "Voll vernetzt",
+          "video": "weihnachten",
           "screen": "pinnwand"
         }
       ]
@@ -986,9 +992,9 @@ var APP_DATA = {
             },
             {
               "id": "banane",
-              "start": 3,
+              "start": 0,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Cafeteria_Banane.mp4', type: "video/mp4"}
               ]
             },
             {
@@ -1021,7 +1027,7 @@ var APP_DATA = {
           "yaw": 2.601,
           "pitch": 0.307,
           "title": "???",
-          "text": "TBD",
+          "text": "",
           "video": "banane"
         },
         {
@@ -1043,7 +1049,7 @@ var APP_DATA = {
     },
     {
       "id": "10-artrium",
-      "name": "Artrium",
+      "name": "Atrium",
       "levels": [
         {
           "tileSize": 256,
@@ -1076,14 +1082,20 @@ var APP_DATA = {
           "type": "video",
           "width": "720",
           "height": "400",
-          "radius": "640",
-          "extraTransforms": "translateY(-121px) rotate(1deg)",
+          "radius": "420",
+          "extraTransforms": "translateY(-121px)",
           "videos": [
             {
-              "id": "schülerrat",
+              "id": "technik",
               "start": 3,
               "sources": [
                 {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+              ]
+            },
+            {
+              "id": "projekte",
+              "sources": [
+                {src: '/assets/Atrium_Projekte.mp4', type: "video/mp4"}
               ]
             }
           ]
@@ -1092,14 +1104,28 @@ var APP_DATA = {
       "linkHotspots": [],
       "videoTriggerHotspots": [
         {
+          "yaw": -0.983911831327336,
+          "pitch": -0.13942708941295692,
+          "title": "Technik AG",
+          "text": 'TBD',
+          "video": "technik",
+        },
+        {
+          "yaw": 0.9099669377539374,
+          "pitch": -0.015799610058891744,
+          "title": "Projektarbeit",
+          "text": 'Beispiele für Projektarbeit',
+          "video": "projekte",
+        }
+      ],
+      "infoHotspots": [
+        {
           "yaw": 2.521339919586479,
           "pitch": -0.13539492991372626,
           "title": "Schülerrat",
-          "text": "TBD",
-          "video": "schülerrat"
+          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/RD3E4OLOyC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         }
-      ],
-      "infoHotspots": []
+      ]
     },
     {
       "id": "11-sporthalle-offen",
