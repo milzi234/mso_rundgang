@@ -239,9 +239,9 @@ var APP_DATA = {
             },
             {
               "id": "unterricht",
-              "start": 3,
+              "start": 0,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Naturwissenschaftsraum_Unterricht.mp4', type: "video/mp4"}
               ]
             },
             {
@@ -275,8 +275,8 @@ var APP_DATA = {
         {
           "yaw": -0.820,
           "pitch": 0.0377,
-          "title": "NW Unterricht",
-          "text": "TBD",
+          "title": "Unterricht in den Naturwissenschaften",
+          "text": "Ein paar Eindrücke",
           "video": "unterricht"
         },
         {
