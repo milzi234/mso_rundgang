@@ -1107,7 +1107,7 @@ var APP_DATA = {
           "yaw": -0.983911831327336,
           "pitch": -0.13942708941295692,
           "title": "Technik AG",
-          "text": 'TBD',
+          "text": '',
           "video": "technik",
         },
         {
