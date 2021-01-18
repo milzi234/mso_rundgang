@@ -893,7 +893,7 @@ var APP_DATA = {
               "id": "sportunterricht",
               "start": 3,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Sporthalle_Unterricht.mp4', type: "video/mp4"}
               ]
             },
             {
@@ -926,7 +926,7 @@ var APP_DATA = {
           "yaw": -0.617,
           "pitch": -0.113,
           "title": "Sportunterricht",
-          "text": "TBD",
+          "text": "Ein paar Eindrücke",
           "video": "sportunterricht"
         },
         {
