@@ -578,7 +578,7 @@ var APP_DATA = {
           "yaw": 0.341,
           "pitch": 0.055,
           "title": "Misereor",
-          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/90UMNYqPuYE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/Qd2CW9naJNs?list=PLGP6n1fsqs95eMMnYAIhNZ__UebcLvjzp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         }
       ],
       "videoTriggerHotspots": [
@@ -814,7 +814,7 @@ var APP_DATA = {
           "yaw": -1.141,
           "pitch": -0.288,
           "title": "Kreativ-AG",
-          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/WJEoIThEeCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/PlSya9n2anc?list=PLGP6n1fsqs95eMMnYAIhNZ__UebcLvjzp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         }
       ],
       "videoTriggerHotspots": [
