@@ -1018,7 +1018,7 @@ var APP_DATA = {
         },
         {
           "yaw": -0.903,
-          "pitch": -0.614,
+          "pitch": -0.364,
           "title": "Nachmittagsbetreuung",
           "text": "Frau Kötter-Röhl & Frau Brab über die Nachmittagsbetreuung",
           "video": "ümi"
