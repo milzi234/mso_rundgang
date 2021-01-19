@@ -331,7 +331,7 @@ var APP_DATA = {
               "id": "unterricht",
               "start": 3,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Computerraum_Unterricht.mp4', type: "video/mp4"}
               ]
             }
           ]
@@ -384,7 +384,7 @@ var APP_DATA = {
           "yaw": -1.150,
           "pitch": 0.401,
           "title": "Informatikunterricht",
-          "text": "TBD",
+          "text": "Ein paar Eindrücke",
           "video": "unterricht"
         }
       ]
