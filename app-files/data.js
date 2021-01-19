@@ -1111,8 +1111,8 @@ var APP_DATA = {
           "video": "technik",
         },
         {
-          "yaw": 0.9099669377539374,
-          "pitch": -0.015799610058891744,
+          "yaw": -1.483911831327336,
+          "pitch": 0,
           "title": "Projektarbeit",
           "text": 'Beispiele für Projektarbeit',
           "video": "projekte",
@@ -1124,6 +1124,12 @@ var APP_DATA = {
           "pitch": -0.13539492991372626,
           "title": "Schülerrat",
           "text": '<iframe width="400rem" height="300rem" src="https://www.youtube.com/embed/RD3E4OLOyC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        },
+        {
+          yaw: 0.9099669377539374,
+          pitch: -0.015799610058891744,
+          title: "Fünftklässer über die MSO",
+          text: '<audio src="assets/Atrium_Beiträge.mp3" controls></audio>'
         }
       ]
     },
