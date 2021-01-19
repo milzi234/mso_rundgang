@@ -1087,9 +1087,9 @@ var APP_DATA = {
           "videos": [
             {
               "id": "technik",
-              "start": 3,
+              "start": 0,
               "sources": [
-                {src: '/assets/platzhalter.mp4', type: "video/mp4"}
+                {src: '/assets/Atrium_Technik.mp4', type: "video/mp4"}
               ]
             },
             {
