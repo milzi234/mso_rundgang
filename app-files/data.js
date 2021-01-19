@@ -119,7 +119,7 @@ var APP_DATA = {
         {
           "yaw": 1.733,
           "pitch": -0.615,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "video": "disco",
           "screen": "nah"
@@ -502,7 +502,7 @@ var APP_DATA = {
         {
           "yaw": 1.909,
           "pitch": -0.17,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "video": "maske",
         }
@@ -599,7 +599,7 @@ var APP_DATA = {
         {
           "yaw": -2.747,
           "pitch": 0.305,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "video": "teddy"
         }
@@ -836,7 +836,7 @@ var APP_DATA = {
         {
           "yaw": 0.661,
           "pitch": 0.111,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "screen": "fenster",
           "video": "maske"
@@ -932,7 +932,7 @@ var APP_DATA = {
         {
           "yaw": -3.195,
           "pitch": 0.230,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "video": "schuh"
         }
@@ -1026,14 +1026,14 @@ var APP_DATA = {
         {
           "yaw": 2.601,
           "pitch": 0.307,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "video": "banane"
         },
         {
           "yaw": 1.0496,
           "pitch": -0.107,
-          "title": "???",
+          "title": "Was ist das?",
           "text": "",
           "video": "cisco"
         }
