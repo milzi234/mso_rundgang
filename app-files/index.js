@@ -474,6 +474,13 @@
     this.currentVideo = null;
     this.currentVideoElement = null;
     this.orientation = opts.orientation;
+    for (var [id, videoElement] of Object.entries(this.videoElements)) {
+      videoElement.addEventListener('play', function () {
+        if (videoElement.style.display == 'none') {
+          videoElement.style.display == 'block'
+        }
+      });
+    }
   }
 
   VideoScreenController.prototype.preload = function () {
@@ -486,7 +493,6 @@
       var self = this;
       // Hide currently showing video
       if (self.currentVideo) {
-        self.currentVideoElement.style.display = 'none';
         self.currentVideoElement.pause();
       }
 
@@ -508,15 +514,22 @@
         }, 200)
         function fadeOut() {
           var video = self.currentVideoElement;
-          video.removeEventListener('ended', fadeOut);
-          video.classList.add('fade-out');
           setTimeout(function () {
-            video.style.opacity = 0;
+            // Still or again playing? 
+            if (!video.paused) {
+              return;
+            }
+            video.removeEventListener('ended', fadeOut);
+            video.removeEventListener('pause', fadeOut);
+            video.classList.add('fade-out');
+            setTimeout(function () {
+              video.style.opacity = 0;
+            }, 200);
+            setTimeout(function () {
+              video.classList.remove('fade-out');
+              video.style.display = 'none';
+            }, 2000);  
           }, 200);
-          setTimeout(function () {
-            video.classList.remove('fade-out');
-            video.style.display = 'none';
-          }, 2000);
         }
         setTimeout(function () {
         // Start playback
